@@ -7,7 +7,7 @@ import PostList from './components/PostList';
 import Navbar from './components/Navbar';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-
+import Home from './pages/Home'
 const ProtectedRouteWrapper = () => {
   return (
     <ProtectedRoute>
@@ -22,6 +22,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/posts" element={<PostList />} />
